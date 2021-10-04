@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<table>-->
+<!--    <th>Amount</th>-->
+<!--    <th>From Currency</th>-->
+<!--    <th>To Currency</th>-->
+<!--</table>-->
+<form>
+
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From</th>
+            <th>To</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><input type="text"id="dauvao"></td>
+            <td><select name="" id="from">
+                <option value="a">VNĐ</option>
+                <option value="b">USD</option>
+            </select></td>
+            <td><select name="" id="to">
+                <option value="a">VNĐ</option>
+                <option value="b">USD</option>
+            </select></td>
+            <td><button onclick="lamDi()">Convert</button></td>
+        </tr>
+    </table>
+
+
+    <script>
+        function lamDi() {
+            let giatrinhapvao = document.getElementById('dauvao').value;
+            let select1 = document.getElementById('from').value;
+            let select2 = document.getElementById('to').value;
+            if (select1 == select2){
+                alert("giatrinhapvao");}
+
+            if (
+                select1=="a" && select2=="b"){
+                alert(giatrinhapvao/24000);}
+
+            if (
+                select1=="b" && select2=="a"){
+                alert(giatrinhapvao*24000);}
+
+        }
+    </script>
+</form>
+</body>
+</html>

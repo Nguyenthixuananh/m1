@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!--Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) -->
+<!--khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.-->
+<p>Số tiền vay</p>
+<input type="text" placeholder="0" id="money">
+<br>
+<p>Số tháng cho vay</p>
+<input type="text" placeholder="0" id="month">
+<br>
+<p>Lãi xuất hàng tháng</p>
+<input type="text" placeholder="0" id="laixuat">
+<input type="button" onclick="tinh()" value="Bấm để tính">
+<p id="kq"></p>
+<script>
+  function tinh() {
+
+    let tien = +document.getElementById("money").value;
+    let thang = +document.getElementById("month").value;
+    let lx = +document.getElementById("laixuat").value;
+    let ketqua;
+    for (let i=1; i<=thang;i++) {
+      ketqua = tien+tien*(lx/100)
+    }document.getElementById("kq").innerText= "Tổng số tiền là" + ketqua
+  }
+</script>
+</body>
+</html>

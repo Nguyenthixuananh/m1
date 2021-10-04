@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<p>Kiểm tra từ đối xứng</p>
+<label> Từ : </label>
+<input id='tuDoiXung' type="text" value="">
+<input id="kt" type="button" value="Check">
+<div id="result"></div>
+<script>
+  document.getElementById("kt").addEventListener('click', () => {
+    let s = document.getElementById("tuDoiXung").value;
+    isPalindrome(s);
+  })
+
+  function isPalindrome(s) {
+    if (s[0] == s[s.length - 1]) {
+      if (s.length === 1) {
+        document.getElementById("result").innerHTML = 'Đây là từ đối xứng';
+        return;
+      }
+      let newS = s.slice(1, s.length - 1);
+      isPalindrome(newS);
+    } else {
+      document.getElementById("result").innerHTML = 'Đây không phải từ đối xứng';
+      return;
+    }
+  }
+</script>
+</body>
+
+</html>

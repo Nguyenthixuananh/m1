@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng
+(Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)-->
+<script>
+    let arr = [];
+
+    while (arr.length < 10) {
+        let inp = parseInt(prompt("Nhập phần tử của mảng"));
+        arr.push(inp)
+    }alert(arr)
+    let v = parseInt(prompt("Nhập số nguyên v"))
+
+    function checkV(arr) {
+
+        for (let i = 0; i < arr.length; i++) {
+            let index = -1;
+            if (v == arr[i]) {
+                index = i;
+            }
+            if (index != -1) {
+                for (let j = index; j < arr.length; j++) {
+                    arr[j] = arr[j + 1];
+                }
+                arr[arr.length - 1] = 0
+                i--;
+            }
+        }
+    }
+    checkV(arr)
+    alert(arr)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+  table tr td {
+    border: red 1px solid;
+  }
+</style>
+<body>
+<h2>Add New Product</h2>
+<input id="newProduct" placeholder="New Product">
+<button onclick="addNewProduct()">Add</button>
+<table id="products">
+  <!--    <tr>-->
+  <!--        <td>Product Name</td>-->
+  <!--        <td>-->
+  <!--            <button onclick="editProduct()">Edit</button>-->
+  <!--        </td>-->
+  <!--        <td>-->
+  <!--            <button onclick="deleteProduct()">Delete</button>-->
+  <!--        </td>-->
+  <!--    </tr>-->
+</table>
+<script>
+  let productLish = ["Sony Xperia", "Samsung Galaxy", "Nokia 6", "Xiaomi Redmi Note 4", "Apple iPhone 6S"]
+
+  function showProduct() {
+    let str = '';
+    for (let i = 0; i < productLish.length; i++) {
+      str += '    <tr>\n' +
+              '        <td>' + productLish[i] + '</td>\n' +
+              '        <td><button onclick="editProduct(' + i + ')">Edit</button></td>\n' +
+              '        <td><button onclick="deleteProduct(' + i + ')">Delete</button></td>\n' +
+              '    </tr>'
+    }
+    document.getElementById("products").innerHTML = str;
+  }
+
+  showProduct();
+
+  function addNewProduct() {
+    let newP = document.getElementById("newProduct").value;
+    productLish.push(newP)
+    showProduct();
+  }
+  function editProduct(index) {
+    let newValue = prompt("Add new product", productLish[index])
+    productLish[index] = newValue
+    showProduct();
+  }
+  function deleteProduct(index) {
+    productLish.splice(index, 1)
+    showProduct();
+  }
+
+
+</script>
+</body>
+</html>

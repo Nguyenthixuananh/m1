@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Di chuyển bóng</title>
+</head>
+<body>
+<img width="200px" height="200px" src="bóng.png" id="ball">
+<p>Click button below to move the image to right</p>
+<button onclick="moveBall()">Click Me</button>
+<script>
+    let ball = null
+    // Tạo hàm init () để khởi tạo ball đã đặt vị trí và các thuộc tính còn lại.
+    function init() {
+        ball = document.getElementById("ball");
+        ball.style.position = "relative";
+        ball.style.right = '0px'
+    }
+
+    function moveBall() {
+        ball.style.right = parseInt(ball.style.right) + -10 + 'px'
+    }
+    window.onload = init;
+</script>
+</body>
+</html>

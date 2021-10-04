@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="rectangle"></canvas>
+<script>
+    class Rectangle {
+        constructor(height, width, x, y, color) {
+            this.height = height;
+            this.width = width;
+            this.x = x;
+            this.y = y;
+            this.color = color;
+        }
+        draw(ctx) {
+            ctx.beginPath()
+            ctx.rect(this.x, this.y, this.height, this.width)
+            ctx.fillStyle = this.color;
+            ctx.fill();
+            ctx.closePath();
+        }
+    }
+    let h = +prompt("Enter the height")
+    let w = +prompt("Enter the width")
+    let ctx = document.getElementById('rectangle').getContext('2d');
+    for (let i= 0; i<10; i++) {
+        let x = Math.random()*500;
+        let y = Math.random()*700;
+        let rect = new Rectangle(h, w, x, y, "Red");
+        console.log(rect)
+        rect.draw(ctx)
+    }
+
+
+</script>
+</body>
+</html>

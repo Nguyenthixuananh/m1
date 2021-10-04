@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Keyboard Event</title>
+</head>
+<style>
+  body{
+    position: relative;
+  }
+
+  img{
+    width: 300px;
+    height: 300px;
+    /*position: absolute;*/
+  }
+</style>
+<body>
+<img id="pokemon" style="top: 300px;left: 200px" src="pikachu.png" width="100px" alt="pikachu">
+
+<script>
+
+  document.getElementById('pokemon').addEventListener('click',changeImage);
+  function changeImage(){
+    if(document.getElementById('pokemon').alt === 'pikachu'){
+      document.getElementById('pokemon').src = "bóng.png";
+      document.getElementById('pokemon').alt = 'meow';
+    }else {
+      document.getElementById('pokemon').src = 'pikachu.png'
+      document.getElementById('pokemon').alt = 'pikachu';
+
+    }
+  }
+</script>
+</body>
+</html>

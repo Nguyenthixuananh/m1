@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label class="switch">
+    <input type="checkbox" id="g" onclick=switchGood()>
+    <span class="slider round good"></span>
+</label>
+<span>
+        <p>Good</p>
+    </span>
+<label class="switch">
+    <input type="checkbox" id="c" onclick=switchCheap()>
+    <span class="slider round cheap"></span>
+</label>
+<span>
+        <p>Cheap</p>
+    </span>
+<label class="switch">
+    <input type="checkbox" id="f" onclick=switchFast()>
+    <span class="slider round fast"></span>
+</label>
+<span>
+        <p>Fast</p>
+    </span>
+<script>
+    function switchGood() {
+        let isGood = document.getElementById("g").checked;
+        let isCheap = document.getElementById("c").checked;
+        let isFast = document.getElementById("f").checked;
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="circle"></canvas>
+<script>
+    class Circle {
+        constructor(radius) {
+            this.radius = radius;
+        }
+        draw(ctx) {
+            ctx.beginPath();
+            ctx.arc(100, 100, this.radius, 0*Math.PI, 2*Math.PI)
+            ctx.stroke();
+            ctx.closePath();
+        }
+    }
+    let ctx = document.getElementById("circle").getContext('2d');
+    let r = +prompt("Nhập bán kính")
+    let circle = new Circle(r)
+    console.log(circle)
+    circle.draw(ctx)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input id="number1" type="text">
+    <input id="number2" type="text">
+    <br>
+    <button onclick="cong()">Addition(+)</button>
+    <button onclick="tru()">Subtraction(-)</button>
+    <button onclick="nhan()">Multiplication(X)</button>
+    <button onclick="chia()">Division(/)</button>
+    <script>
+        function cong() {
+            let a = +document.getElementById("number1").value;
+            let b = +document.getElementById("number2").value;
+            let tong = a + b;
+            alert("Kết quả là:" + tong);
+        }
+
+        function tru() {
+            let a = document.getElementById("number1").value;
+            let b = document.getElementById("number2").value;
+            let hieu = a - b;
+            alert("Kết quả là:" + hieu);
+
+        }
+
+        function nhan() {
+            let a = document.getElementById("number1").value;
+            let b = document.getElementById("number2").value;
+            let tich = a * b;
+            alert("Kết quả là:" + tich);
+        }
+
+        function chia() {
+            let a = document.getElementById("number1").value;
+            let b = document.getElementById("number2").value;
+            let thuong = a / b;
+            alert("Kết quả là:" + thuong);
+        }
+    </script>
+</form>
+</body>
+</html>
