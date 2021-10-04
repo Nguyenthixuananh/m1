@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findX(a,b) {
+        if (b===0) {
+            if (a===0) {
+                return "Phương trình vô nghiệm"
+            } else return "Phương trình vô số nghiệm"
+        } else {
+            return -b/a
+        }
+    }
+    let a = parseInt(prompt("Nhập a"));
+    let b = parseInt(prompt("Nhập b"));
+    alert(findX(a,b))
+</script>
+</body>
+</html>

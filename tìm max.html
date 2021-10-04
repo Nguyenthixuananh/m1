@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+
+  function findMax(arr) {
+    let max = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i]>max) {
+        max = arr[i]
+      }
+    } return "Số lớn nhất là " + max
+
+  }
+  let a = [];
+  let count = parseInt(prompt("Nhập vào số phần tử"))
+  for (; a.length <= count ;) {
+    let i = parseInt(prompt("Nhập vào phần tử trong mảng"))
+    a.push(i)
+  }
+  alert(findMax(a))
+</script>
+</body>
+</html>

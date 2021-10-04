@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = ["u", "e", "o", "a", "i"];
+
+    function check(arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < a.length; j++) {
+                if (arr[i] === a[j]) {
+                    count += 1
+                }
+            }
+        }
+        if (count === 0) {
+            return false
+        } else return count;
+    }
+
+    let str = prompt("Nhập 1 chuỗi bất kỳ:");
+    let arr1 = str.split("")
+    document.write("Các phần tử trong chuỗi vừa nhập là: " + arr1 +"<br>");
+    if (check(arr1) > 0) {
+        document.write("Chuỗi của bạn có số ký tự nguyên âm là " + check(arr1));
+    } else document.write("Chuỗi của bạn không có các ký tự nguyên âm")
+</script>
+</body>
+</html>
